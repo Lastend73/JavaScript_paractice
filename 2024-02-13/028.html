@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 사용하기</title>
+    <!-- CDN으로 가져오기 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+        jQuery는 자바스크립트를 간편하게 작성할 수 있게 도와주는 함수들의 집합(라이브러리)
+        (프레임워크 : 라이브러리 + 사용법)
+     -->
+    <h1>곱셈</h1>
+    <p>결과 : <span id="target"></span></p>
+    <input type="text" id="num1" placeholder="숫자1"><br>
+    <input type="text" id="num2" placeholder="숫자2"><br>
+    <button onclick="곱셈()">적정체중계산</button>
+    <script>
+        function 곱셈() {
+            const num1 = $("#num1").val()
+            const num2 = $("#num2").val()
+            const target = $('#target');
+            const result = num1 * num2
+            target.text(result)
+        }
+    </script>
+</body>
+
+</html>

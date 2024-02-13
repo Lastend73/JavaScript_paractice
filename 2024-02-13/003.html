@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        자바 스크립트는 윈도우(브라우저)를 객체로 봄  
+        winodw 겍처 - history, location. document, console. navigator
+    -->
+    <script>
+        // window.navigator : 웹브라우저
+        window.console.log(window.navigator.userAgent);
+        
+        // 겍채 내부 : 필드(값) , 메소드 (기능)
+        console.log(location.href)
+
+        // 새로고침
+        // location.reload();
+
+        // 웹브라우저 조작 
+        location.href = "https://naver.com"
+        history.back()
+    </script>
+
+</body>
+</html>

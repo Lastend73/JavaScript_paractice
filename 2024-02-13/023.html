@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 클릭하면 JS 활용하기</title>
+</head>
+
+<body>
+    아이디 : <input type="text" id="username"><br>
+    비밀번호 : <input type="password" id="password"><br>
+    <button onclick="print()">확인</button>
+    <!-- 
+        버튼을 클리하면 아래 형식으로 출력한다
+        "아이디 : spring 비밀번호 1234"
+     -->
+    <script>
+       function print(){
+        username = document.getElementById("username");
+        pass = document.getElementById("password");
+        
+        alert(`아이디 : ${username.value} 비밀번호 : ${pass.value}` )
+
+       }
+    </script>
+</body>
+
+</html>

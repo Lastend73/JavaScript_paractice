@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 사용하기</title>
+    <!-- CDN으로 가져오기 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+        jQuery는 자바스크립트를 간편하게 작성할 수 있게 도와주는 함수들의 집합(라이브러리)
+        (프레임워크 : 라이브러리 + 사용법)
+     -->
+    <h1>최저 연봉</h1>
+    <p>최저연봉 : <span id="target"></span></p>
+    <input type="text" id="money" placeholder="시급"><br>
+    <button onclick="최저연봉()">적정체중계산</button>
+    <script>
+        function 최저연봉() {
+            const pay = $("#money").val()
+            const target = $('#target');
+            const moeny = parseInt(pay) * 209 * 12;
+            target.text(moeny + '원')
+        }
+    </script>
+</body>
+
+</html>

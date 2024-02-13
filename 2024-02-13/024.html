@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 클릭하면 JS 활용하기</title>
+</head>
+
+<body>
+   <!-- document.getElementById, innerHtml, onclick -->
+   <h1>숫자를 제곱해서 출력하기</h1>
+   <p>제곱값 : <span id="target"></span></p>
+   <input type="text" id="num" placeholder="숫자">
+   <button onclick="multi()">제곱하기</button>
+    <script>
+       function multi(){
+        const target = document.getElementById("target");
+        const num_ele = document.getElementById("num");
+        const num = parseInt(num_ele.value);
+        target.innerHTML = num * num
+
+       }
+    </script>
+</body>
+
+</html>

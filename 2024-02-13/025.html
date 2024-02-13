@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 클릭하면 JS 활용하기</title>
+</head>
+
+<body>
+   <!-- document.getElementById, innerHtml, onclick -->
+   <h1>적정체중 구하기(키 - 105)</h1>
+   <p>적정체중 : <span id="target"></span></p>
+   <input type="text" id="height" placeholder="키입력">
+   <button onclick="weight()">키입력</button>
+    <script>
+       function weight(){
+        const target = document.getElementById("target");
+        const height_ele = document.getElementById("height");
+        const height = parseInt(height_ele.value);
+        target.innerHTML = height - 105 +'Kg';
+
+       }
+    </script>
+</body>
+
+</html>
