@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덧셈기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <input type="text" id="val1">
+    *
+    <input type="text" id="val2">
+    =
+    <input type="text" id="result" disabled>
+    <button id="multi">계산하기</button>
+    
+
+    <script>
+        //  JQuery>를 선택한 요소와 js로 선택한 요소는  호환 x
+        //  1. 필요한 중요 요소를 ㅁ두 선택
+        let $val1 = $('#val1');
+        let $val2 = $('#val2');
+        let $result = $('#result');
+        let $multi = $('#multi');
+
+        $multi.on('click', function(){
+            // callbakc
+            let sum = parseInt($val1.val()) * parseInt($val2.val())
+            $result.val(sum)
+        })
+    </script>
+</body>
+</html>

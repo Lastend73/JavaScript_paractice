@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이벤트 처리</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 올해의 년도는 2024. 나이를 출력하시오 -->
+    나이 : <input type="number" id="year">
+    <button onclick="year()">출력</button>
+
+    <script>
+        function year() {
+            let date = new Date();
+            let thisyear = date.getFullYear();
+            const year = $("#year").val()
+            let nai = thisyear - year
+            if (nai >= 20)  {
+                alert("성인")
+            } else{
+                alert("미성년자")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스 좌표 출력</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  #canvas {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+  }
+</style>
+
+<body>
+  <h1>마우스 좌표출력</h1>
+  <div id="canvas">
+
+  </div>
+  <div id="target">
+
+  </div>
+  <script>
+    let $canvas = $("#canvas");
+    let $target = $("#target");
+    let drag = 'off'
+
+    $canvas.on("mousemove", function (e) {
+      let x = e.pageX;
+      let y = e.pageY;
+      
+      // x좌표 342, y 좌표 :125
+      $canvas.on("mousedown",function(e){
+        drag = 'on';
+      })
+
+      $canvas.on("mouseup",function(e){
+        drag = 'off';
+      })
+
+      let str = `x좌표 ${x}, y좌표 ${y}`;
+      
+      if(drag == 'on'){
+       str = `x좌표 ${x}, y좌표 ${y} (드래그중)`;
+      }
+      $target.text(str)
+    })
+
+  </script>
+
+</body>
+
+
+</html>

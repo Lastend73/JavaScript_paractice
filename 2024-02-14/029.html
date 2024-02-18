@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이벤트 처리</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <select name="" id="menu">
+       <option >1</option>
+       <option >2</option>
+       <option >3</option>
+       <option >4</option>
+       <option >4</option>
+       <option >5</option>
+       <option >7</option>
+       <option >8</option>
+       <option >9</option>
+    </select>
+    <button id="print">요금 출력</button>
+
+    <script>
+        // 1인당 입장료 3000원
+         $("#print").click(()=>{
+            const price = 3000;
+            alert($("#menu").val() *price + "원 입니다")
+         })
+        
+
+    </script>
+
+</body>
+
+</html>

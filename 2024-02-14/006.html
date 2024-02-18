@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Not a Number</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        let a = "10";
+        console.log(parseInt(a)) // 10;
+
+        let b = "assas";
+        console.log(parseInt(b)) // 10;
+
+        // b값이 숫자로 바꿀수 있으면 바꿔서출력, 없으면 에러메시지 뛰우기
+        if(isNaN(parseInt(b))){
+            alert('숫자를 입력하세요')
+        }else{
+            alert(parseInt(b))
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ligth bulb</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <p id="target">test</p>
+    </div>
+    <button id="english">영어인사</button>
+    <button id="korean">한국인사</button>
+    <script>
+        
+        let $target = $("#target")
+        let $english = $("#english")
+        let $korean = $("#korean")
+
+        $english.on("click",function(){
+            $target.text("Hello")
+        })
+
+        $korean.on("click",function(){
+            $target.text("안녕하세요")
+        })
+
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>call back 함수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+    // 개발자가 만든 다음, 위탁해서 실행
+    let i =1
+
+    function insa() {
+        console.log(`${i++}번쨰 안녕하세요`)
+
+    }
+    setInterval(insa , 1000)  // 기능을 1초마다 실행
+    setInterval(function(){
+        let d = new Date();
+        console.log(d);
+    },1000)
+    </script>
+
+</body>
+
+</html>

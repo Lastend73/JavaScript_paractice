@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery append</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+  <h1>입력한 값은 ul 에 추가</h1>
+  <input type="number" id="num">
+  <ul id="target">
+  </ul>
+
+  <script>
+    let $num = $("#num");
+    let $target = $("#target");
+    $num.on('keyup', function (e) {
+      if (e.keyCode === 13) {
+        let num = $num.val()
+        $target.append(`<li>${num}</li>`)
+        $num.val("")
+      }
+    })
+  </script>
+</body>
+
+
+</html>

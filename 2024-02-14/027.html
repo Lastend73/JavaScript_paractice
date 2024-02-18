@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이벤트 처리</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!--
+         년도를 입력받아 경복궁 입장료를 출력하시오
+        입장료는 25세 사이이상 64세까지 "3000원"
+        기타 는 무료
+     -->
+    년도 : <input type="number" id="year">
+    <button onclick="year()">출력</button>
+
+    <script>
+        function year() {
+            let date = new Date();
+            let thisyear = date.getFullYear();
+            const year = $("#year").val()
+            let nai = thisyear - year
+
+            if (nai >= 25 && nai <= 65)  {
+                alert("3000원")
+            } else{
+                alert("무료")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

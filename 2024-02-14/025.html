@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이벤트 처리</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 점수가 70점이상이면 합격, 아니면 불합격이라고 alert() 출력 -->
+    점수 : <input type="number" id="jumsu">
+    <button onclick="print()">선택</button>
+
+
+    <!-- 올해의 년도는 2024. 나이를 출력하시오 -->
+    나이 : <input type="number" id="year">
+    <button onclick="year()">나이출력</button>
+
+    <script>
+        function print() {
+            // const result = document.getElementById("jumsu").value
+            const result = $("#jumsu").val()
+            alert(typeof result)
+            if (result === 70)  {
+                alert("합격")
+            } else{
+                alert("불합격")
+            }
+        }
+
+        function year(){
+            const year = $("#year").val()
+            alert(2024-year+"년")
+        }
+    </script>
+
+</body>
+
+</html>

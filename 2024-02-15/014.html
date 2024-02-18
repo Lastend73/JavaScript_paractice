@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스 좌표 출력</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  #canvas {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+  }
+</style>
+
+<body>
+  <input type="number" id="num">
+  <button id="btn">입력</button>
+  <div id="target">
+
+  <script>
+    let $num = $('#num');
+    let ar = [];
+
+    $num.on('keyup',function(e){
+      if(e.keyCode === 13){
+        ar.push($num.val());
+        $num.val("")
+        $num.focus();
+        $target.text(ar)
+      }
+    })
+    let $btn = $('#btn');
+    let $target = $('#target')
+
+  </script>
+
+</body>
+
+
+</html>

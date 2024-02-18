@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta namae="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소드 tesxt val attr csss</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        #target {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<div id="target">
+</div>
+<button id="btn">원으로</button>
+<script>
+    // 버튼을 클릭하면 border-radius를 100px로
+    // 배경색은 blue로 변경하시오
+
+    let $target = $("#target");
+    let $btn = $("#btn");
+    let Figure = "square";
+
+    $btn.on("click", function () {
+      if(Figure === "square"){
+        $target.css("border-radius", "100px").css("background-color", "blue")
+        $btn.text("사각형으로")
+        Figure = "circle"
+      }else{
+        $target.css("border-radius", "0px").css("background-color", "red")
+        $btn.text("원으로")
+        Figure = "square";
+      }
+        
+    })
+</script>
+</body>
+
+</html>

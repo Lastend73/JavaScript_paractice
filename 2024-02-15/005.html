@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ligth bulb</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- https://www.w3schools.com/js/pic_bulboff.gif -->
+    <!-- https://www.w3schools.com/js/pic_bulbon.gif -->
+
+    <button id="on" d>켜기</button>
+    <img >
+    <button id="off">끄기</button>
+
+    <script>
+        let $img = $("img");
+        let $on = $("#on");
+        let $off = $("#off");
+
+        $img.attr("src","https://www.w3schools.com/js/pic_bulbon.gif");
+
+        $on.on('click',function(){
+            $img.attr("src","https://www.w3schools.com/js/pic_bulbon.gif");
+            $on.attr("disabled",true)
+            $off.attr("disabled",false)
+        })
+
+        $off.on('click',function(){
+            $img.attr("src","https://www.w3schools.com/js/pic_bulboff.gif");
+            $on.attr("disabled",false)
+            $off.attr("disabled",true)
+        })
+
+        
+    </script>
+</body>
+
+
+</html>

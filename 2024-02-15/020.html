@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery append</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+  <h1>입력한 값은 ul 에 추가</h1>
+  <input type="text" id="num">
+  <ul id="target">
+    <li>임영웅</li>
+    <li>세븐틴</li>
+    <li>르세라핌</li>
+  </ul>
+
+  <script>
+    let $num = $("#num");
+    let $target = $("#target");
+    $num.on('keyup', function (e) {
+      if (e.keyCode === 13) {
+        let num = $num.val()
+        $target.append(`<li>${num}</li>`)
+        $num.val("")
+      }
+    })
+    /*
+    동적인 요소에 대한 것만 동작
+    추가 입력된건 적용이 안됨
+    $('li').on('click',function(){
+      alert("클릭했어요")
+    })
+    */
+
+    // 등적인 요소 이벤트를 처리하려면 선택지를 2개
+    $('#target').on("click",'li',function(){
+      alert("클릭했어요")
+    })
+  </script>
+</body>
+
+
+</html>
